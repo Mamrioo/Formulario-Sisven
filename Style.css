@@ -1,0 +1,92 @@
+
+.cuadro-titulo {
+        width: 80%; /* Ajusta el ancho del cuadro */
+        max-width: 600px; /* Establece un ancho máximo para el cuadro */
+        margin: 50px auto; /* Centra el cuadro horizontalmente y le da un margen superior e inferior */
+        padding: 20px; /* Añade un poco de espacio alrededor del texto dentro del cuadro */
+        background-color: #d3d3d3; /* Color de fondo del cuadro */
+        border-radius: 8px; /* Suaviza las esquinas del cuadro */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añade una sombra al cuadro para darle profundidad */
+        text-align: center; /* Centra el texto dentro del cuadro */
+    }
+
+h2 {
+    text-align: center;
+    color: #0f0f0f;
+}
+
+form {
+    max-width: 850px;
+    margin: 20px auto;
+    background: #d3d3d3;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #ffffff1a;
+}
+
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/* Estilos para la tabla */
+table {
+    border-collapse: collapse;
+    width: 95%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 6px;
+    text-align: left;
+    background-color: #fcfcfc;
+
+}
+
+th {
+    background-color: #f7f7f7;
+}
+
+.form-background {
+    background-image: url('https://img.freepik.com/foto-gratis/fondo-borroso-oscuro-abstracto-color-textura-suave-degradado-patron-sitio-web-brillante-brillante-encabezado-banner-o-imagen-arte-grafico-barra-lateral_1258-82972.jpg?w=360');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 100px;/* Espacio alrededor de los formularios */
+    margin-top: 10;
+    min-height: 100vh; /* Asegura que el contenedor tenga al menos la altura de la ventana del navegador */
+
+}
+.form-container1 {
+    position: relative; /* Esto permite posicionar las imágenes absolutamente dentro de este div */
+}
+
+.form-container1 img:first-child {
+    width: 20%; /* Asegúrate de que la imagen de fondo cubra todo el div */
+    height: auto;
+}
+    

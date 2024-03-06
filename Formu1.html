@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud Sisven</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+<div class="form-background">
+    <div class="form-container">
+        <div class="form-container1">
+            <img src="https://caracoltv.brightspotcdn.com/dims4/default/d2e5b42/2147483647/strip/true/crop/1000x716+0+0/resize/1000x716!/quality/90/?url=https%3A%2F%2Fcaracol-brightspot.s3-us-west-2.amazonaws.com%2Fassets%2Fbluradio%2Fsisben_foto_sisben_1.jpg">
+           
+        
+        </div>
+        <div class="cuadro-titulo">
+            <h2 class="titulo-solicitud">Solicitud de Sisben</h2><br>
+        </div>
+        
+        <form action="/submit_Datos_Usuario.php" method="post">
+        
+
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br>
+        
+        <label for="apellido">Apellido:</label><br>
+        <input type="text" id="apellido" name="apellido" required><br>
+        
+        
+        <label for="fecha_nacimiento">Fecha de nacimiento:</label><br>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br>
+
+        <label for="Identificaion">Cedula de ciudadania:</label><br>
+        <input type="text" id="Cedula" name="Identificacion"><br>
+        
+        <label for="fecha_expedicion">Fecha de expedicion de la cedula:</label><br>
+        <input type="date" id="fecha_expedicion" name="fecha_expedicion" required><br>
+        
+    
+          <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+          <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+          
+      
+        
+        <label for="telefono">Teléfono:</label><br>
+        <input type="tel" id="telefono" name="telefono" required><br>
+
+        <label for="Ciudad">Ciudad:</label><br>
+        <input type="text" id="ciudad" name="ciudad" required><br>
+
+        <label for="nombre">Municipio:</label><br>
+        <input type="text" id="Municipio" name="Municipio" required><br>
+
+        
+
+        
+        <label for="direccion">Dirección donde reside:</label><br>
+        <textarea id="direccion" name="direccion" required></textarea><br>
+
+        <label for="estrato">Estrato:</label><br>
+        <select id="estrato" name="estrato">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select><br>
+
+    </form>
+    <form action="/submit_datos_personales.php" method="post">
+        <h3><center>Datos personales</center></h3>
+
+        <label for="profesion">Ocupacion:</label><br>
+        <input type="text" id="profesion" name="profesion"><br>
+        
+        <label for="personas-table">Personas del hogar:</label>
+        <table id="personas-table">
+            <thead>
+               <tr>
+                 <th>Nombre</th>
+                 <th>Relación</th>
+                 <th>Edad</th>
+                 <th>Ocupación</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                 <td contenteditable="true"></td>
+                 <td contenteditable="true"></td>
+                 <td contenteditable="true"></td>
+                 <td contenteditable="true"></td>
+               </tr>
+               <tr>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+              </tr>
+              <tr>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+              </tr>
+              <tr>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+              </tr>
+            
+            </tbody>
+           </table>
+           <script>
+            document.querySelector('form').addEventListener('submit', function(event) {
+                event.preventDefault();
+            
+                // Recopila los datos de la tabla
+                const table = document.getElementById('personas-table');
+                const rows = table.querySelectorAll('tbody tr');
+                let personas = [];
+            
+                rows.forEach(row => {
+                    const nombre = row.cells[0].textContent;
+                    const relacion = row.cells[1].textContent;
+                    const edad = row.cells[2].textContent;
+                    const ocupacion = row.cells[3].textContent;
+            
+                    personas.push({ nombre, relacion, edad, ocupacion });
+                });
+            
+                // Aquí puedes agregar los datos de la tabla a los datos del formulario
+                // y enviarlos al servidor
+                console.log('Datos de la tabla:', personas);
+            });
+            </script>
+            
+            <label for="nivel_educacion">Nivel de Educación:</label><br>
+            <select id="nivel_educacion" name="nivel_educacion">
+              <option>Seleccionar</option>
+                <option value="primaria">Primaria</option>
+                <option value="secundaria">Secundaria</option>
+                <option value="bachillerato">Bachillerato</option>
+                <option value="universidad">Universidad</option>
+                <option value="posgrado">Posgrado</option>
+                <option value="otro">Otro</option>
+            </select><br>
+        <label for="estado_civil">Estado civil:</label><br>
+        <select id="estado_civil" name="estado_civil"><br>
+          <option>Seleccionar</option>
+            <option value="soltero">Soltero/a</option>
+            <option value="casado">Casado/a</option>
+            <option value="viudo">Viudo/a</option>
+            <option value="union_libre">Unión libre</option>
+            <option value="separado">Separado/a</option>
+            <option value="conviviente">Conviviente</option>
+            <option value="otro">Otro</option>
+
+        </select>
+        <label for="consentimiento_tratamiento">Consentimiento para el Tratamiento de Datos:</label><br>
+      <input type="checkbox" id="consentimiento_tratamiento" name="consentimiento_tratamiento" required>
+      <label for="consentimiento_tratamiento">Acepto el tratamiento de mis datos personales para los fines indicados.</label><br>
+
+      <input type="submit" value="Enviar">
+      <div class="form-container">
+      </div>
+        
+
+</body>
+</html>
